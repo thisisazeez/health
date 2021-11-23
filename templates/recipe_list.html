@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Recipes{% endblock title %}
+{% block content %}
+{% for recipe in object_list %}
+<div class="card">
+    <div class="card-header">
+        <span class="font-weight-bold">{{ recipe.title }}</span> &middot;
+        <span class="text-muted">by {{ recipe.author }} |
+            {{ recipe.date }}</span>
+    </div>
+    <div class="card-body">
+        {{ recipe.body }}
+    </div>
+    <!-- <div class="card-footer text-center text-muted">
+        <a href="#">Edit</a> | <a href="#">Delete</a>
+    </div> -->
+</div>
+<br />
+
+<div class="card-footer text-center text-muted">
+<a href="{% url 'recipe_edit' recipe.pk %}">Edit</a> |
+<a href="{% url 'recipe_delete' recipe.pk %}">Delete</a>
+</div>
+{% endfor %}
+{% endblock content %}
