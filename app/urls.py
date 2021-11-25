@@ -19,6 +19,11 @@ from .views import (
 urlpatterns = [
 
     path('', views.index, name='index'),
+    path('config/', views.stripe_config),#new
+    path('create-checkout-session/', views.create_checkout_session),#latest
+    path('success/', views.success),  # new
+    path('cancel/', views.cancel),  # new
+    path('webhook/', views.stripe_webhook),  # new
 
 
     path('<int:pk>/edit/',ArticleUpdateView.as_view(), name='article_edit'), 

@@ -133,6 +133,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+STRIPE_ENDPOINT_SECRET = 'whsec_eEg0GDxyFahmchaQb5GxdRBHqgwtpAj1'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51JzjEqBa2X9VbrMIfmn0OePjAj2dYtZJCEhqQ3l93BnyKJSbDaittBYrIpybZAZ2XoKzBu9K0DT9pfBL9xf67dgh00yNxKWicF'
+STRIPE_SECRET_KEY = 'sk_test_51JzjEqBa2X9VbrMIaSZFPRUijmbA181rAgO4Xg9miG7d28k3XlLfVigzl2HOrlReU6merq5uNbBjpbj2veBM8hIJ00VZP1JST8'
+
+STRIPE_PRICE_ID = 'price_1JzjPvBa2X9VbrMIxcb17bgP'
+
+
+
 AUTH_USER_MODEL = 'users.CustomUser'
 
 LOGIN_REDIRECT_URL = 'home'

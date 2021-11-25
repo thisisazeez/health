@@ -2,7 +2,7 @@
 {% block content %}
 {% load static %}
 
-
+<!-- 
 <div class="header-wrapper">
     <div class="container">
         <div class="row">
@@ -32,8 +32,8 @@
         </div>
     </div>
 </div>
-<!-- header-section close -->
-<!-- slider-start -->
+header-section close -->
+<!-- slider-start
 <div class="slider">
     <div class="owl-carousel slider">
         <div class="item">
@@ -95,7 +95,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- slider-close -->
 <!-- service-start -->
 <div class="space-medium bg-light">
@@ -110,7 +110,7 @@
                 <!-- /.section title start-->
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="service-block ">
                     <div class="service-img"><a href="#"><img src="{% static 'images/service-1.jpg' %}"></a></div>
@@ -136,7 +136,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- service-close -->
 <!-- diet-plan-start -->
 <div class="space-medium">
@@ -150,7 +150,7 @@
                 </div>
                 <!-- /.section title start-->
             </div>
-        </div>
+        <!-- </div>
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="plan-block">
@@ -207,10 +207,10 @@
                             Now</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Doctor plans -->
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="plan-block">
                     <div class="plan-header">
                         <h3>Doctor Plan </h3>
@@ -233,9 +233,9 @@
 
         </div>
     </div>
-</div>
+</div> -->
 <!-- diet-plan-close -->
-<div class="space-medium bg-light">
+<!-- <div class="space-medium bg-light">
     <div class="container">
         <div class="row">
             <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12">
@@ -264,7 +264,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- about-close -->
 <!-- news-start -->
 <div class="space-medium">
@@ -278,7 +278,7 @@
                 <!-- /.section title start-->
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             {% for x in recipe %}
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <div class="post-block">
@@ -300,7 +300,7 @@
                 </div>
             </div>
             {% endfor %}
-        </div>
+        </div> -->
 
 
     <div class="space-medium">
@@ -315,7 +315,7 @@
                 </div>
             </div>
 
-                <div class="row">
+                <!-- <div class="row">
                     {% for z in article %}
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="post-block">
@@ -324,7 +324,7 @@
                                 <a href="#" class="imghover">
                                     <img src="{{ z.image.url }}" alt="" class="img-responsive"></a>
                             </div>
-                            <!-- post block -->
+                            post block 
                             <div class="post-content">
                                 <div class="meta">
                                     <span class="meta-categories"><a href="#">Recipes</a></span>
@@ -338,7 +338,7 @@
                     </div>
                     {% endfor %}
                 </div>
-            </div>
+            </div> -->
             <!-- </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="post-block">
@@ -365,7 +365,7 @@
                             <a href="#" class="imghover">
                                 <img src="{% static 'images/post-img-small-3.jpg' %}" alt="" class="img-responsive"></a>
                         </div>
-                        <!-- post block 
+                   post block 
                         <div class="post-content">
                             <div class="meta">
                                 <span class="meta-categories"><a href="#">Health Care </a></span>
@@ -381,7 +381,7 @@
     </div>
 </div>
 <!-- news-close -->
-<!-- testimonials-start -->
+<!-- testimonials-start
 <div class="space-medium bg-light">
     <div class="container">
         <div class="testimonial-carousel">
@@ -473,9 +473,11 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </div> -->
+<!-- </div> -->
 <!-- testimonials-close  -->
 
-
+<div class="container mt-5">
+    <button type="submit" class="btn btn-primary" id="submitBtn">Subscribe</button>
+  </div>
 {% endblock %}
