@@ -6,6 +6,19 @@ from django.urls import reverse_lazy
 from .models import Article, Recipe
 
 
+
+
+def index(request):
+    article = Article.objects.all()[:3]
+    recipe = Recipe.objects.all()[:3]
+
+    context = {
+        'article':article,
+        'recipe':recipe
+    }
+
+    return render(request, 'index.html', context)
+
 class ArticleListView(ListView):
     model = Article
     template_name = 'article_list.html'
