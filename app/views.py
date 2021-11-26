@@ -20,6 +20,31 @@ from django.views.decorators.csrf import csrf_exempt # new
 import stripe
 
 
+@login_required
+def checkout(request):
+    try:
+        # Retrieve the subscription & product
+        stripe_customer = StripeCustomer.objects.get(user=request.user)
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        subscription = stripe.Subscription.retrieve(stripe_customer.stripeSubscriptionId)
+        product = stripe.Product.retrieve(subscription.plan.product)
+
+        # Feel free to fetch any additional data from 'subscription' or 'product'
+        # https://stripe.com/docs/api/subscriptions/object
+        # https://stripe.com/docs/api/products/object
+
+        return render(request, 'checkout.html', {
+            'subscription': subscription,
+            'product': product,
+        })
+
+    except StripeCustomer.DoesNotExist:
+        return render(request, 'checkout.html')
+
+
+@login_required
+def plans(request):
+    return render(request, 'booking.html')
 
 @csrf_exempt
 def stripe_webhook(request):

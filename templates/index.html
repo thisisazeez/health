@@ -2,7 +2,7 @@
 {% block content %}
 {% load static %}
 
-<!-- 
+
 <div class="header-wrapper">
     <div class="container">
         <div class="row">
@@ -15,10 +15,10 @@
                         <ul>
                             <li class="active"><a href="index.html" title="Home">Home</a></li>
 
-                            <li class="has-sub"><a href="blog-default.html" title="Blog ">Blog</a>
+                            <li class="has-sub"><a href="{% url 'article_list' %}" href="{% url 'recipe_list' %}" title="Blogs ">Blogs</a>
                                 <ul>
-                                    <li><a href="blog-default.html" title="Blog">Blog Default</a></li>
-                                    <li><a href="blog-single.html" title="Blog Single ">Blog Single</a></li>
+                                    <li><a href="{% url 'article_list' %}" title="article">Article</a></li>
+                                    <li><a href="{% url 'recipe_list' %}" title="recipe">Recipe</a></li>
                                 </ul>
                             </li>
 
@@ -32,8 +32,8 @@
         </div>
     </div>
 </div>
-header-section close -->
-<!-- slider-start
+<!-- header-section close -->
+<!-- slider-start -->
 <div class="slider">
     <div class="owl-carousel slider">
         <div class="item">
@@ -95,7 +95,7 @@ header-section close -->
             </div>
         </div>
     </div>
-</div> -->
+</div>
 <!-- slider-close -->
 <!-- service-start -->
 <div class="space-medium bg-light">
@@ -110,7 +110,7 @@ header-section close -->
                 <!-- /.section title start-->
             </div>
         </div>
-        <!-- <div class="row">
+        <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="service-block ">
                     <div class="service-img"><a href="#"><img src="{% static 'images/service-1.jpg' %}"></a></div>
@@ -136,7 +136,7 @@ header-section close -->
             </div>
         </div>
     </div>
-</div> -->
+</div>
 <!-- service-close -->
 <!-- diet-plan-start -->
 <div class="space-medium">
@@ -150,67 +150,9 @@ header-section close -->
                 </div>
                 <!-- /.section title start-->
             </div>
-        <!-- </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="plan-block">
-                    <div class="plan-header">
-                        <h3>Free Plan</h3>
-                        <p class="plan-price">$00.00</p>
-                    </div>
-                    <div class="plan-content">
-                        <ul class="angle angle-right">
-                            <li>View Blogs By Our Nutritionist </li>
-                            <li>Nutritional data to support macro-nutrient</li>
-                            <li>A choice of calorie-levels (1200-1500)</li>
-                        </ul>
-                        <a href="#" class="btn btn-default ">Start Your Journey Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="plan-block">
-                    <div class="plan-header">
-                        <h3>Enterprice Plan </h3>
-                        <p class="plan-price">$199.99</p>
-                    </div>
-                    <div class="plan-content">
-                        <ul class="angle angle-right">
-
-                            <li>Access to over 1000+ healthy recipes</li>
-                            <li>Nutritional data to support calorie counting</li>
-                            <li>Swap to suit your personal taste and lifestyle</li>
-                            <li>Calorie Tracker. </li>
-                        </ul>
-                        <a href="#" class="btn btn-default" style="word-wrap: break-word;">Start Your Journey
-                            Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="plan-block">
-                    <div class="plan-header">
-                        <h3>Weekly Plan </h3>
-                        <p class="plan-price">$99.99</p>
-                    </div>
-                    <div class="plan-content">
-                        <ul class="angle angle-right">
-
-                            <li>Access to over 1000+ healthy recipes</li>
-                            <li>Nutritional data to support calorie counting</li>
-                            <li>View Blogs By Our Nutritionist </li>
-                            <li>A choice of calorie-levels (1200-1500)</li>
-
-                        </ul>
-                        <a href="#" class="btn btn-default" style="word-wrap: break-word;">Start Your Journey
-                            Now</a>
-                    </div>
-                </div>
-            </div> -->
-
+        </div>
             <!-- Doctor plans -->
-            <!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="plan-block">
                     <div class="plan-header">
                         <h3>Doctor Plan </h3>
@@ -225,7 +167,7 @@ header-section close -->
                             <li>Swap to suit your personal taste and lifestyle</li>
                             <li>Calorie Tracker. </li>
                         </ul>
-                        <a href="#" class="btn btn-default" style="word-wrap: break-word;">Start Your Journey
+                        <a href="{% url 'plan' %}" class="btn btn-default" style="word-wrap: break-word;">Start Your Journey
                             Now</a>
                     </div>
                 </div>
@@ -233,9 +175,9 @@ header-section close -->
 
         </div>
     </div>
-</div> -->
+</div>
 <!-- diet-plan-close -->
-<!-- <div class="space-medium bg-light">
+<div class="space-medium bg-light">
     <div class="container">
         <div class="row">
             <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12">
@@ -264,7 +206,7 @@ header-section close -->
             </div>
         </div>
     </div>
-</div> -->
+</div>
 <!-- about-close -->
 <!-- news-start -->
 <div class="space-medium">
@@ -278,7 +220,7 @@ header-section close -->
                 <!-- /.section title start-->
             </div>
         </div>
-        <!-- <div class="row">
+        <div class="row">
             {% for x in recipe %}
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <div class="post-block">
@@ -300,88 +242,47 @@ header-section close -->
                 </div>
             </div>
             {% endfor %}
-        </div> -->
+        </div>
 
-
-    <div class="space-medium">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="section-title">
-                        <!-- section title start-->
-                        <h1>Latest News &amp; Diet Tips</h1>
+        <div class="space-medium">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-title">
+                            <!-- section title start-->
+                            <h1>Latest News &amp; Diet Tips</h1>
+                        </div>
+                        <!-- /.section title start-->
                     </div>
-                    <!-- /.section title start-->
+                </div>
+        <div class="row">
+            {% for z in article %}
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="post-block">
+
+                    <div class="post-img">
+                        <a href="#" class="imghover">
+                            <img src="{{ z.image.url }}" alt="" class="img-responsive"></a>
+                    </div>
+                    <!-- post block -->
+                    <div class="post-content">
+                        <div class="meta">
+                            <span class="meta-categories"><a href="#">Recipes</a></span>
+                            <span class="meta-date">30 July, 2020</span>
+                        </div>
+                        <h4><a href="#" class="title">{{ z.title }}</a></h4>
+                        <p>{{ z.body }}</p>
+                        <a href="#" class="btn-link">read more</a>
+                    </div>
                 </div>
             </div>
-
-                <!-- <div class="row">
-                    {% for z in article %}
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="post-block">
-
-                            <div class="post-img">
-                                <a href="#" class="imghover">
-                                    <img src="{{ z.image.url }}" alt="" class="img-responsive"></a>
-                            </div>
-                            post block 
-                            <div class="post-content">
-                                <div class="meta">
-                                    <span class="meta-categories"><a href="#">Recipes</a></span>
-                                    <span class="meta-date">30 July, 2020</span>
-                                </div>
-                                <h4><a href="#" class="title">{{ z.title }}</a></h4>
-                                <p>{{ z.body }}</p>
-                                <a href="#" class="btn-link">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div> -->
-            <!-- </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="post-block">
-                        <div class="post-img">
-                            <a href="#" class="imghover">
-                                <img src="{% static 'images/post-img-small-2.jpg' %}" alt="" class="img-responsive">
-                            </a>
-                        </div>
-                         post block 
-                        <div class="post-content">
-                            <div class="meta">
-                                <span class="meta-categories"><a href="#">Weight Loss</a></span>
-                                <span class="meta-date">29 July, 2020</span>
-                            </div>
-                            <h4><a href="#" class="title">Inflammation Fighting Foods</a></h4>
-                            <p>Vitae aliquet metus semperveicula juonecin doloreer ornare....</p>
-                            <a href="#" class="btn-link">read more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="post-block">
-                        <div class="post-img">
-                            <a href="#" class="imghover">
-                                <img src="{% static 'images/post-img-small-3.jpg' %}" alt="" class="img-responsive"></a>
-                        </div>
-                   post block 
-                        <div class="post-content">
-                            <div class="meta">
-                                <span class="meta-categories"><a href="#">Health Care </a></span>
-                                <span class="meta-date">28 July, 2020</span>
-                            </div>
-                            <h4><a href="#" class="title">Habits, health &amp; fitness news catchup</a></h4>
-                            <p>Aliquet metus semper vehiculase juonecin dolor sederate....</p>
-                            <a href="#" class="btn-link">read more</a>
-                        </div>
-                    </div>
-                </div> -->
+            {% endfor %}
         </div>
-    </div>
+
+<!-- div> -->
 </div>
 <!-- news-close -->
-<!-- testimonials-start
+<!-- testimonials-start -->
 <div class="space-medium bg-light">
     <div class="container">
         <div class="testimonial-carousel">
@@ -473,11 +374,9 @@ header-section close -->
                 </div>
             </div>
         </div>
-    </div> -->
-<!-- </div> -->
+    </div>
+</div>
 <!-- testimonials-close  -->
 
-<div class="container mt-5">
-    <button type="submit" class="btn btn-primary" id="submitBtn">Subscribe</button>
-  </div>
+
 {% endblock %}

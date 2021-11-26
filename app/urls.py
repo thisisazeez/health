@@ -20,6 +20,7 @@ urlpatterns = [
 
     path('', views.index, name='index'),
     path('config/', views.stripe_config),#new
+    path('plan/AshsdhdyyeyDhshshDSGSYTSREWHJejhejej/', views.plans, name="plan"),#new
     path('create-checkout-session/', views.create_checkout_session),#latest
     path('success/', views.success),  # new
     path('cancel/', views.cancel),  # new
