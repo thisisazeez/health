@@ -7,13 +7,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                <a href="index.html"><img src="" alt="">LoGo</a>
+                <a href="{% url 'home' %}"><img src="" alt="">LoGo</a>
             </div>
             <div class="col-lg-8 col-md-10 col-sm-12 col-xs-12">
                 <div class="navigation">
                     <div id="navigation">
                         <ul>
-                            <li class="active"><a href="index.html" title="Home">Home</a></li>
+                            <li class="active"><a href="{% url 'home' %}" title="Home">Home</a></li>
 
                             <li class="has-sub"><a href="{% url 'article_list' %}" href="{% url 'recipe_list' %}" title="Blogs ">Blogs</a>
                                 <ul>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="col-lg-2 hidden-md hidden-sm hidden-xs">
-                <div class="header-btn"><a href="#" class="btn btn-default">get started</a></div>
+                <div class="header-btn"><a href="#sub" class="btn btn-default">get started</a></div>
             </div>
         </div>
     </div>
@@ -54,7 +54,7 @@
                                 place for you and your
                                 Nutrition</h1>
                             <p class="slider-text hidden-xs">Healthy habits | Track Calories </p>
-                            <a href="#" class="btn btn-default btn-lg hidden-sm hidden-xs">About Nutirionist</a>
+                            <a href="#avout" class="btn btn-default btn-lg hidden-sm hidden-xs">About Us</a>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                                 Healthy Body
                                 For Life</h1>
                             <p class="slider-text hidden-xs">Create Lean | Healthy Body | Healthy Life</p>
-                            <a href="#" class="btn btn-default btn-lg hidden-sm hidden-xs">View My Services</a>
+                            <a href="#serv" class="btn btn-default btn-lg hidden-sm hidden-xs">View  Services</a>
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                                 HEALTHIEST JOURNEY
                                 TOGETHER</h1>
                             <p class="slider-text hidden-xs">Lets Begin | Healthiest Journey | Together </p>
-                            <a href="#" class="btn btn-default btn-lg  hidden-sm hidden-xs">Get started Now</a>
+                            <a href="#sub" class="btn btn-default btn-lg  hidden-sm hidden-xs">Get started Now</a>
                         </div>
                     </div>
                 </div>
@@ -98,14 +98,14 @@
 </div>
 <!-- slider-close -->
 <!-- service-start -->
-<div class="space-medium bg-light">
+<div class="space-medium bg-light" id="serv">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="section-title">
                     <!-- section title start-->
-                    <h1>Specialize in weight management programmes</h1>
-                    <p>Specialised advice to assist you in reaching your weight goals.</p>
+                    <!-- <h1>S</h1> -->
+                    <p>Specialised advice to assist you in reaching your  goals.</p>
                 </div>
                 <!-- /.section title start-->
             </div>
@@ -139,13 +139,13 @@
 </div>
 <!-- service-close -->
 <!-- diet-plan-start -->
-<div class="space-medium">
+<div class="space-medium" id="sub">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="section-title">
                     <!-- section title start-->
-                    <h1>Nutrition lans</h1>
+                    <h1>Nutrition Plans</h1>
                     <p>Once a plan is purchased, you should expect to begin your plan in 2 weeks.</p>
                 </div>
                 <!-- /.section title start-->
@@ -177,12 +177,13 @@
     </div>
 </div>
 <!-- diet-plan-close -->
-<div class="space-medium bg-light">
+<!-- about start -->
+<div class="space-medium bg-light" id="avout">
     <div class="container">
         <div class="row">
             <div class="col-lg-6  col-md-6 col-sm-12 col-xs-12">
                 <div class="about-section">
-                    <h1>About Nutritionist</h1>
+                    <h1>About Us</h1>
                     <p>Vestibulum quis massa nunroin tincidunt imper odio congue felis Perrnon porttiultricies
                         aurasitame. </p>
                     <div class="row">
@@ -232,12 +233,12 @@
                     <!-- post block -->
                     <div class="post-content">
                         <div class="meta">
-                            <span class="meta-categories"><a href="#">Recipes</a></span>
+                            <span class="meta-categories"><a href="#">{{ x.category }}</a></span>
                             <span class="meta-date">30 July, 2020</span>
                         </div>
                         <h4><a href="#" class="title">{{ x.title }}</a></h4>
                         <p>{{ x.body }}</p>
-                        <a href="#" class="btn-link">read more</a>
+                        <!-- <a href="*" class="btn-link">read more</a> -->
                     </div>
                 </div>
             </div>
@@ -267,12 +268,12 @@
                     <!-- post block -->
                     <div class="post-content">
                         <div class="meta">
-                            <span class="meta-categories"><a href="#">Recipes</a></span>
+                            <span class="meta-categories"><a href="#">{{ z.category }}</a></span>
                             <span class="meta-date">30 July, 2020</span>
                         </div>
                         <h4><a href="#" class="title">{{ z.title }}</a></h4>
                         <p>{{ z.body }}</p>
-                        <a href="#" class="btn-link">read more</a>
+                        <!-- <a href="#" class="btn-link">read more</a> -->
                     </div>
                 </div>
             </div>
@@ -283,7 +284,7 @@
 </div>
 <!-- news-close -->
 <!-- testimonials-start -->
-<div class="space-medium bg-light">
+<!-- <div class="space-medium bg-light">
     <div class="container">
         <div class="testimonial-carousel">
             <div class="owl-carousel slider">
@@ -375,7 +376,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- testimonials-close  -->
 
 

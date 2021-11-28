@@ -13,12 +13,13 @@ class StripeCustomer(models.Model):
         return self.user.username
 
 class Article(models.Model):
-    title = models.CharField(max_length=255)
+    category = models.CharField(max_length=20, blank=True, null=True)
+    title = models.CharField(max_length=255, blank=True, null=True)
     body = models.TextField()
     image = models.ImageField(upload_to="%Y/%m/%d", default="")
     date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(
-        get_user_model(),
+        CustomUser,
         on_delete=models.CASCADE,
     )
     def __str__(self):
@@ -31,6 +32,7 @@ class Article(models.Model):
 
 
 class Recipe(models.Model):
+    category = models.CharField(max_length=20, blank=True, null=True)
     title = models.CharField(max_length=255)
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)

@@ -29,7 +29,7 @@ def checkout(request):
         subscription = stripe.Subscription.retrieve(stripe_customer.stripeSubscriptionId)
         product = stripe.Product.retrieve(subscription.plan.product)
 
-        # Feel free to fetch any additional data from 'subscription' or 'product'
+        # fetch additional data from 'subscription' or 'product'
         # https://stripe.com/docs/api/subscriptions/object
         # https://stripe.com/docs/api/products/object
 
