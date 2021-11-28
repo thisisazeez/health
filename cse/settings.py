@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-
+    'pwa',
 
     'crispy_forms',
 
@@ -142,7 +142,7 @@ STRIPE_SECRET_KEY = 'sk_test_51JzjEqBa2X9VbrMIaSZFPRUijmbA181rAgO4Xg9miG7d28k3Xl
 
 STRIPE_PRICE_ID = 'price_1JzjPvBa2X9VbrMIxcb17bgP'
 
-
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js')
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
